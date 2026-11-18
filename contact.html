@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Priyanshu Yaduvanshi</title>
+  <meta name="description" content="Get in touch with Priyanshu Yaduvanshi for opportunities, collaborations, or freelance projects." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+
+  <!-- Galaxy Canvas & Cosmic Cursor Aura -->
+  <canvas id="galaxy-canvas"></canvas>
+  <div id="cursor-aura" aria-hidden="true">
+    <span class="star-ray ray-v"></span>
+    <span class="star-ray ray-h"></span>
+    <span class="star-ray ray-d1"></span>
+    <span class="star-ray ray-d2"></span>
+  </div>
+  <div id="cursor-aura-core" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">PY<span class="accent">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="skills.html" class="nav-link">Skills</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+    <section class="section page-section" id="contact">
+      <div class="container">
+        <div class="section-label reveal">06 / CONTACT</div>
+        <h1 class="section-title reveal">Let's Connect</h1>
+        <p class="section-sub reveal">Open to opportunities, collaborations, or just a great conversation.</p>
+
+        <div class="contact-layout">
+
+          <div class="contact-links reveal">
+            <a href="mailto:priyanshuyaduvanshi0017@gmail.com" class="contact-card glass-card">
+              <div class="contact-card-icon" style="background: linear-gradient(135deg,#ea4335,#fbbc04);">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">Email</span>
+                <span class="contact-card-value">priyanshuyaduvanshi0017@gmail.com</span>
+              </div>
+              <i class="fas fa-external-link-alt contact-external"></i>
+            </a>
+
+            <a href="https://github.com" target="_blank" rel="noopener" class="contact-card glass-card">
+              <div class="contact-card-icon" style="background: linear-gradient(135deg,#333,#555);">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">GitHub</span>
+                <span class="contact-card-value">github.com/priyanshu</span>
+              </div>
+              <i class="fas fa-external-link-alt contact-external"></i>
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-card glass-card">
+              <div class="contact-card-icon" style="background: linear-gradient(135deg,#0077b5,#00a0dc);">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">LinkedIn</span>
+                <span class="contact-card-value">linkedin.com/in/priyanshu</span>
+              </div>
+              <i class="fas fa-external-link-alt contact-external"></i>
+            </a>
+
+            <a href="tel:+918810205132" class="contact-card glass-card">
+              <div class="contact-card-icon" style="background: linear-gradient(135deg,#06b6d4,#0891b2);">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-card-label">Phone</span>
+                <span class="contact-card-value">+91 8810205132</span>
+              </div>
+              <i class="fas fa-external-link-alt contact-external"></i>
+            </a>
+          </div>
+
+          <form class="contact-form glass-card reveal" id="contactForm">
+            <h3 class="form-title">Send a Message</h3>
+            <div class="form-group">
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Your Email</label>
+              <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" name="subject" placeholder="Let's work together!" />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me about your project or just say hi 👋" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+
+        </div>
+
+        <nav class="page-nav" aria-label="Page navigation">
+          <a href="blog.html" class="page-nav-link prev">
+            <i class="fas fa-arrow-left"></i>
+            <span><small>Previous</small>Blog</span>
+          </a>
+          <a href="index.html" class="page-nav-link next">
+            <span><small>Back To</small>Home</span>
+            <i class="fas fa-home"></i>
+          </a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">PY<span class="accent">.</span></a>
+          <p>CS Student · Developer · Creative Thinker</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:priyanshuyaduvanshi0017@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Priyanshu Yaduvanshi — Built with <i class="fas fa-heart" style="color:#7c3aed;"></i> &amp; lots of coffee</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="static/js/main.js"></script>
+</body>
+</html>

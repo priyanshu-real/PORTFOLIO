@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Priyanshu Yaduvanshi</title>
+  <meta name="description" content="Articles and notes by Priyanshu Yaduvanshi on Python for Data Analysis, Android Development, and Cybersecurity." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+
+  <!-- Galaxy Canvas & Cosmic Cursor Aura -->
+  <canvas id="galaxy-canvas"></canvas>
+  <div id="cursor-aura" aria-hidden="true">
+    <span class="star-ray ray-v"></span>
+    <span class="star-ray ray-h"></span>
+    <span class="star-ray ray-d1"></span>
+    <span class="star-ray ray-d2"></span>
+  </div>
+  <div id="cursor-aura-core" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">PY<span class="accent">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="skills.html" class="nav-link">Skills</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <!-- ═══════════════════════════ BLOG ═══════════════════════════ -->
+    <section class="section page-section" id="blog">
+      <div class="container">
+        <div class="section-label reveal">05 / BLOG &amp; ARTICLES</div>
+        <h1 class="section-title reveal">My Thoughts</h1>
+        <p class="section-sub reveal">Ideas, learnings, and insights I've picked up along the way.</p>
+        <div class="blog-grid">
+
+          <article class="blog-card glass-card reveal">
+            <div class="blog-icon">
+              <i class="fab fa-python"></i>
+            </div>
+            <div class="blog-meta">
+              <span class="blog-tag">Python</span>
+              <span class="blog-date">Data Analysis</span>
+            </div>
+            <h3 class="blog-title">Getting Started with Python for Data Analysis</h3>
+            <p class="blog-excerpt">
+              A beginner-friendly guide to leveraging Python's powerful libraries like Pandas, NumPy, and Matplotlib to explore, clean, and visualize data effectively.
+            </p>
+            <a href="#" class="blog-read-more" data-article="python-data-analysis">Read More <i class="fas fa-arrow-right"></i></a>
+          </article>
+
+          <article class="blog-card glass-card reveal">
+            <div class="blog-icon">
+              <i class="fab fa-android"></i>
+            </div>
+            <div class="blog-meta">
+              <span class="blog-tag">Android</span>
+              <span class="blog-date">Mobile Dev</span>
+            </div>
+            <h3 class="blog-title">My Journey into Android Development</h3>
+            <p class="blog-excerpt">
+              From setting up Android Studio for the first time to building my first functional app — lessons learned, challenges faced, and what kept me going.
+            </p>
+            <a href="#" class="blog-read-more" data-article="android-journey">Read More <i class="fas fa-arrow-right"></i></a>
+          </article>
+
+          <article class="blog-card glass-card reveal">
+            <div class="blog-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="blog-meta">
+              <span class="blog-tag">Cybersecurity</span>
+              <span class="blog-date">Security</span>
+            </div>
+            <h3 class="blog-title">Cybersecurity Basics Every Developer Should Know</h3>
+            <p class="blog-excerpt">
+              Security isn't an afterthought. Essential concepts like SQL injection, XSS, secure authentication, and best practices every developer must understand.
+            </p>
+            <a href="#" class="blog-read-more" data-article="cybersecurity-basics">Read More <i class="fas fa-arrow-right"></i></a>
+          </article>
+
+        </div>
+
+        <nav class="page-nav" aria-label="Page navigation">
+          <a href="projects.html" class="page-nav-link prev">
+            <i class="fas fa-arrow-left"></i>
+            <span><small>Previous</small>Projects</span>
+          </a>
+          <a href="contact.html" class="page-nav-link next">
+            <span><small>Next Page</small>Contact</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- Article Reader Modal -->
+  <div class="article-modal" id="articleModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="articleModalTitle">
+    <div class="article-modal-dialog">
+      <button class="article-modal-close" id="articleModalClose" aria-label="Close article">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="article-modal-meta">
+        <span class="blog-tag" id="articleModalTag"></span>
+        <span class="blog-date" id="articleModalDate"></span>
+      </div>
+      <h2 class="article-modal-title" id="articleModalTitle"></h2>
+      <div class="article-modal-body" id="articleModalBody"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">PY<span class="accent">.</span></a>
+          <p>CS Student · Developer · Creative Thinker</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:priyanshuyaduvanshi0017@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Priyanshu Yaduvanshi — Built with <i class="fas fa-heart" style="color:#7c3aed;"></i> &amp; lots of coffee</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="static/js/main.js"></script>
+</body>
+</html>

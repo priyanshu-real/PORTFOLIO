@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Priyanshu Yaduvanshi</title>
+  <meta name="description" content="About Priyanshu Yaduvanshi — Computer Science student at SGT University, developer, event anchor, and creative freelancer." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+
+  <!-- Galaxy Canvas & Cosmic Cursor Aura -->
+  <canvas id="galaxy-canvas"></canvas>
+  <div id="cursor-aura" aria-hidden="true">
+    <span class="star-ray ray-v"></span>
+    <span class="star-ray ray-h"></span>
+    <span class="star-ray ray-d1"></span>
+    <span class="star-ray ray-d2"></span>
+  </div>
+  <div id="cursor-aura-core" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">PY<span class="accent">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="skills.html" class="nav-link">Skills</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+    <section class="section page-section" id="about">
+      <div class="container">
+        <div class="section-label reveal">01 / ABOUT</div>
+        <h1 class="section-title reveal">Who I Am</h1>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p class="about-bio">
+              I'm a <strong>Computer Science student</strong> at SGT University, passionate about software development, AI, and cybersecurity. I enjoy building practical projects, learning modern technologies, and continuously improving my skills.
+            </p>
+            <p class="about-bio">
+              Beyond code, I <strong>anchor university events</strong>, create digital content, and freelance in photography &amp; videography — earning ₹20,000+ through creative work.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon"><i class="fas fa-graduation-cap"></i></span>
+                <div>
+                  <strong>B.Tech CSE</strong>
+                  <span>SGT University, 2023–2027</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon"><i class="fas fa-map-marker-alt"></i></span>
+                <div>
+                  <strong>Delhi, India</strong>
+                  <span>PIN 110043</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon"><i class="fas fa-phone"></i></span>
+                <div>
+                  <strong>+91 8810205132</strong>
+                  <span>Available anytime</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon"><i class="fas fa-microphone"></i></span>
+                <div>
+                  <strong>Event Anchor</strong>
+                  <span>University-level events</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-stats reveal">
+            <div class="stat-card glass-card">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Internships</span>
+            </div>
+            <div class="stat-card glass-card">
+              <span class="stat-number">₹20K+</span>
+              <span class="stat-label">Freelance Earned</span>
+            </div>
+            <div class="stat-card glass-card">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Years B.Tech</span>
+            </div>
+            <div class="stat-card glass-card">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+            <div class="edu-timeline">
+              <h4 class="edu-title">Education</h4>
+              <div class="edu-item">
+                <span class="edu-year">2023–2027</span>
+                <div>
+                  <strong>B.Tech CSE</strong>
+                  <span class="edu-institute">SGT University, Gurgaon</span>
+                </div>
+              </div>
+              <div class="edu-item">
+                <span class="edu-year">2022</span>
+                <div>
+                  <strong>12th Standard</strong>
+                  <span class="edu-institute">Holy Child Public School, Rewari</span>
+                </div>
+              </div>
+              <div class="edu-item">
+                <span class="edu-year">2020</span>
+                <div>
+                  <strong>10th Standard</strong>
+                  <span class="edu-institute">Bharti International School, Rewari</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="page-nav" aria-label="Page navigation">
+          <a href="index.html" class="page-nav-link prev">
+            <i class="fas fa-arrow-left"></i>
+            <span><small>Previous</small>Home</span>
+          </a>
+          <a href="skills.html" class="page-nav-link next">
+            <span><small>Next Page</small>Skills</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">PY<span class="accent">.</span></a>
+          <p>CS Student · Developer · Creative Thinker</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:priyanshuyaduvanshi0017@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Priyanshu Yaduvanshi — Built with <i class="fas fa-heart" style="color:#7c3aed;"></i> &amp; lots of coffee</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="static/js/main.js"></script>
+</body>
+</html>
